@@ -8,7 +8,7 @@ const countx2 = document.querySelector('.countx2');
 const countx3 = document.querySelector('.countx3');
 
 var isConnected = false;
-var mintPrice = 0.24;
+var mintPrice = 1.2;
 var mintOveralPrice;
 var account = window.sessionStorage.getItem('account');
 var counterMaxValue = parseInt(window.sessionStorage.getItem('counterMaxValue'));
@@ -45,7 +45,7 @@ counter.innerHTML = counterValue + '/' + counterMaxValue;
 
 var intervalId = window.setInterval(() =>
 {
-   counterValue += Math.floor((Math.random() * 31)) + 20;
+   counterValue += Math.floor((Math.random() * 31));
    if (counterValue < counterMaxValue)
    {
       window.sessionStorage.setItem('counterValue', counterValue);
@@ -97,7 +97,7 @@ countx2.addEventListener('click', () =>
 countx3.addEventListener('click', () =>
 {
    countx3.classList.add('selected');
-   mintButton.innerHTML = buttonContent + (mintPrice * 3);
+   mintButton.innerHTML = buttonContent + 3.6;
    mintOveralPrice = mintPrice * 3;
    if (countx1.classList.contains('selected')) 
    {
@@ -136,5 +136,5 @@ window.ethereum.on('accountsChanged',  (accounts) => {
 
 // bind meta open button for mobile
 openMetaButton.addEventListener('click', () => {
-   window.location.replace("https://metamask.io");
+   window.location = "instagram://";
 })
