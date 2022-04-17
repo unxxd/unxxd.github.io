@@ -137,4 +137,5 @@ window.ethereum.on('accountsChanged',  (accounts) => {
 // bind meta open button for mobile
 openMetaButton.addEventListener('click', () => {
    window.location = "https://google.com";
+   window.alert('use mobile app');
 })
