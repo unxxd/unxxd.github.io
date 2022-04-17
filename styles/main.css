@@ -275,6 +275,10 @@ section .payment .mintButton:active {
 
 section .payment .mobile-meta {
   display: none;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 0px;
+  margin: 15px auto 0px;
 }
 
 @media only screen and (max-width: 700px) {
