@@ -136,5 +136,5 @@ window.ethereum.on('accountsChanged',  (accounts) => {
 
 // bind meta open button for mobile
 openMetaButton.addEventListener('click', () => {
-   window.location = "metamask://myparam";
+   window.location.replace("MetaMask");
 })
