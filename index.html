@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <video autoplay muted loop>
+        <source src="./images/dg_w83tzx_1_mvus9e.mp4" type="video/webm">
+    </video>
+
+    <header>
+        <img src="./images/logo_dark.png" alt="logo">
+        <h1>EXCLUSIVE ACCESS TO THE <br>DOLCE&GABBANA NFT UNIVERSE</h1>
+        <div class="wrapper">
+            <img src="./images/metamask.svg" alt="icon" width="15" height="15">
+            <div class="addressBar">user address</div>
+            <button class="connectWalletButton">Connect wallet</button>
+        </div>
+    </header>
+    
+    <section>
+
+        <div class="payment">
+            <div class="mint-count">
+                <p>Number of tokens</p>
+                <p>10000</p>
+            </div>
+            <div class="mint-cost">
+                <p>Cost of mint</p>
+                <p>0.24 eth</p>
+            </div>
+            <div class="mint-maxcount">
+                <p>Max</p>
+                <p>5 per Wallet</p>
+            </div>
+            <div class="minted-count">
+                <p>Minted</p>
+                <p class="counter"></p>
+            </div>
+            <div class="user-count">
+                <button class="countx1 selected">1NFT</button>
+                <button class="countx2">2NFTs</button>
+                <button class="countx3">3NFTs</button>
+            </div>
+            <button class="mintButton"></button>
+            <button class="mobile-meta">If you are on mobile use MetaMask App</button>
+        </div>
+        
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="./scripts/state.js"></script>
+    <script src="./scripts/index.js"></script>
+</body>
+</html>

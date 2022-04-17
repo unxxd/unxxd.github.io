@@ -1,0 +1,319 @@
+@font-face {
+  font-family: sfpro;
+  src: url(../fonts/sf-pro-display_medium.woff2);
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  font-family: sfpro;
+  position: relative;
+  overflow: hidden;
+}
+
+body video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1250px) {
+  body video {
+    -webkit-transform: translateX(0%) scale(2) translateY(12%);
+            transform: translateX(0%) scale(2) translateY(12%);
+  }
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  position: relative;
+  padding-top: 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 25px;
+  border-radius: 0 0px 10px 10px;
+}
+
+@media only screen and (max-width: 1250px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+header h1 {
+  text-align: center;
+}
+
+@media only screen and (max-width: 1250px) {
+  header h1 {
+    padding-top: 10px;
+    font-size: 22px;
+  }
+}
+
+header > img {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  margin-left: 20px;
+  height: 20px;
+  width: 111px;
+  display: block;
+}
+
+@media only screen and (max-width: 1250px) {
+  header > img {
+    position: relative;
+    top: 5px;
+  }
+}
+
+header .wrapper {
+  position: absolute;
+  top: auto;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  margin-right: 50px;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 1250px) {
+  header .wrapper {
+    top: 20px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  header .wrapper {
+    display: none;
+  }
+}
+
+header .wrapper * {
+  padding: 10px;
+}
+
+header .wrapper img {
+  display: block;
+}
+
+header .wrapper div {
+  background-color: transparent;
+  display: none;
+}
+
+header .wrapper button {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header .wrapper button:hover {
+  background-color: transparent;
+}
+
+section {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 1250px) {
+  section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+section .payment {
+  padding: 15px;
+  margin-right: 140px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  height: 300px;
+  color: white;
+  width: 500px;
+  font-size: 26px;
+}
+
+@media only screen and (max-width: 1250px) {
+  section .payment {
+    margin-bottom: 20px;
+    margin-right: 0px;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  section .payment {
+    margin-bottom: 20px;
+    margin-right: 0px;
+    height: 300px;
+    width: 300px;
+  }
+}
+
+section .payment * {
+  padding-top: 10px;
+}
+
+section .payment p {
+  margin: 0;
+}
+
+section .payment .mint-count {
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section .payment .mint-cost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section .payment .mint-maxcount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section .payment .minted-count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section .payment .mintButton {
+  display: block;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  background-color: white;
+  color: black;
+  padding: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+section .payment .mintButton:hover {
+  background-color: rgba(128, 128, 128, 0.4);
+  color: white;
+}
+
+section .payment .mintButton:active {
+  background-color: #e66465;
+}
+
+section .payment .mobile-meta {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  section .payment .mobile-meta {
+    display: block;
+  }
+}
+
+section .payment .user-count {
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+section .payment .user-count button {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  margin: 0 10px;
+  border-radius: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+section .payment .user-count button:hover {
+  background-color: rgba(128, 128, 128, 0.4);
+  color: white;
+}
+
+section .payment .user-count .selected {
+  background-color: white;
+  color: black;
+}
+/*# sourceMappingURL=main.css.map */
