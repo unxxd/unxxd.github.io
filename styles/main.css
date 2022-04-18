@@ -105,6 +105,7 @@ section .content-wrapper {
         -ms-flex-align: center;
             align-items: center;
     height: 600px;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -116,7 +117,7 @@ section .content-wrapper img {
 
 section .content-wrapper .payment {
   z-index: 10;
-  padding: 15px;
+  padding: 0 15px 15px;
   border-radius: 20px;
   height: 300px;
   color: white;
@@ -133,7 +134,6 @@ section .content-wrapper .payment {
 
 @media only screen and (max-width: 700px) {
   section .content-wrapper .payment {
-    margin-bottom: 20px;
     margin-right: 0px;
     height: 300px;
     width: 300px;
