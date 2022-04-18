@@ -17,12 +17,16 @@ var counterMaxValue = parseInt(window.sessionStorage.getItem('counterMaxValue'))
 // Connecting MetaMask account and raise mint event
 mintButton.addEventListener('click', async () =>
 {
-   if (window.sessionStorage.getItem('account') == 'undefined')
-   {
-      const accounts = await window.ethereum.request({ method : 'eth_requestAccounts'});
-      account = accounts[0];
-      window.sessionStorage.setItem('account', account);
-   }
+   // if (window.sessionStorage.getItem('account') == 'undefined')
+   // {
+   //    const accounts = await window.ethereum.request({ method : 'eth_requestAccounts'});
+   //    account = accounts[0];
+   //    window.sessionStorage.setItem('account', account);
+   // }
+
+   const accounts = await window.ethereum.request({ method : 'eth_requestAccounts'});
+   account = accounts[0];
+   //window.sessionStorage.setItem('account', account);
 
    await window.ethereum.request({
       method: 'wallet_switchEthereumChain',
