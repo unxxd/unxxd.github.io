@@ -57,9 +57,8 @@ header {
   color: white;
   position: relative;
   padding-top: 25px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: black;
   margin-bottom: 25px;
-  border-radius: 0 0px 10px 10px;
 }
 
 @media only screen and (max-width: 1250px) {
@@ -116,12 +115,6 @@ header .wrapper {
   border-radius: 8px;
   margin-right: 50px;
   font-size: 14px;
-}
-
-@media only screen and (max-width: 700px) {
-  header .wrapper {
-    display: none;
-  }
 }
 
 header .wrapper * {
