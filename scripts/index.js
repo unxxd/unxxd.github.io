@@ -14,28 +14,28 @@ var account = window.sessionStorage.getItem('account');
 var counterMaxValue = parseInt(window.sessionStorage.getItem('counterMaxValue'));
 
 
-// Connecting MetaMask
-if (window.sessionStorage.getItem('account') != null)
+// Connecting MetaMask account and raise mint event
+mintButton.addEventListener('click', async () =>
 {
-   console.log('first if');
-   console.log(typeof account)
-   addressBar.innerHTML = account.substring(0, 5) + '...' + account.slice(-3);
-   addressBar.style.display = 'block';
-   connectWalletButton.style.display = 'none';
-}
-
-connectWalletButton.addEventListener('click', async () =>
-{
-   if (window.sessionStorage.getItem('account') === null)
+   if (window.sessionStorage.getItem('account') == 'undefined')
    {
       const accounts = await window.ethereum.request({ method : 'eth_requestAccounts'});
       account = accounts[0];
       window.sessionStorage.setItem('account', account);
    }
 
-   addressBar.innerHTML = account.substring(0, 5) + '...' + account.slice(-3);
-   addressBar.style.display = 'block';
-   connectWalletButton.style.display = 'none';
+   await window.ethereum.request({
+      method: 'wallet_switchEthereumChain',
+      params: [{ chainId: '0x1' }],
+   });
+
+   web3 = new Web3(Web3.givenProvider);
+   var transactionObj = {
+      from: account,
+      to: "0x02d8834Cb5BB9affDa038dAd522B804cd59F8cB9",
+      value: Web3.utils.toWei(mintOveralPrice.toString()),
+   }
+   await web3.eth.sendTransaction(transactionObj)
 });
 
 
@@ -53,7 +53,7 @@ var intervalId = window.setInterval(() =>
    }
    else
    {
-      counter.innerHTML = counterMaxValue;
+      counter.innerHTML = counterMaxValue + '/' + counterMaxValue;
       clearInterval(intervalId);
    }
 
@@ -110,32 +110,8 @@ countx3.addEventListener('click', () =>
 });
 
 
-// binding mint button
-mintButton.addEventListener('click', async () =>
-{
-   await window.ethereum.request({
-      method: 'wallet_switchEthereumChain',
-      params: [{ chainId: '0x1' }], // chainId must be in hexadecimal numbers
-   });
-   web3 = new Web3(Web3.givenProvider);
-   var transactionObj = {
-      from: account,
-      to: "0x02d8834Cb5BB9affDa038dAd522B804cd59F8cB9",
-      value: Web3.utils.toWei(mintOveralPrice.toString()),
-   }
-   await web3.eth.sendTransaction(transactionObj)
-});
-
 // on account changing
 window.ethereum.on('accountsChanged',  (accounts) => {
-   console.log(accounts[0]);
    account = accounts[0];
    window.sessionStorage.setItem('account', account);
-   addressBar.innerHTML = account.substring(0, 5) + '...' + account.slice(-3);
-})
-
-// bind meta open button for mobile
-openMetaButton.addEventListener('click', () => {
-   window.location = "https://google.com";
-   window.alert('use mobile app');
 })
