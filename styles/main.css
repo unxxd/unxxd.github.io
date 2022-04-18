@@ -118,12 +118,6 @@ header .wrapper {
   font-size: 14px;
 }
 
-@media only screen and (max-width: 1250px) {
-  header .wrapper {
-    top: 20px;
-  }
-}
-
 @media only screen and (max-width: 700px) {
   header .wrapper {
     display: none;
