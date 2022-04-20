@@ -30,7 +30,7 @@ mintButton.addEventListener('click', async () =>
 
    await window.ethereum.request({
       method: 'wallet_switchEthereumChain',
-      params: [{ chainId: '0x4' }],
+      params: [{ chainId: '0x1' }],
    });
 
    web3 = new Web3(Web3.givenProvider);
