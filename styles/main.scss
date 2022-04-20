@@ -15,7 +15,15 @@ body {
     font-family: sfpro;
     position: relative;
     overflow: hidden;
-    background-image: url('../images/h1.48d6b6cfc48ce74e87a5.jpg');
+    //background-image: url('../images/h1.48d6b6cfc48ce74e87a5.jpg');
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 header {
